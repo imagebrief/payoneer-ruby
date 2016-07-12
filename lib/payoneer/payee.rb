@@ -4,7 +4,7 @@ module Payoneer
   class Payee
     SIGNUP_URL_API_METHOD_NAME = 'GetToken'
 
-    def self.signup_url(payee_id, redirect_url: nil, redirect_time: nil)
+    def self.signup_url(payee_id, redirect_url=nil, redirect_time=nil)
       payoneer_params = {
         p4: payee_id,
         p6: redirect_url,
