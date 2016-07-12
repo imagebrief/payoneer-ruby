@@ -18,7 +18,7 @@ module Payoneer
     end
 
     def ==(other)
-      code == other.code && body == other.body
+      @code == other.code && body == other.body
     end
   end
 end
