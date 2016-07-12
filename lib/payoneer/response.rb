@@ -14,7 +14,7 @@ module Payoneer
     end
 
     def ok?
-      code == OK_STATUS_CODE
+      @gcode == OK_STATUS_CODE
     end
 
     def ==(other)
