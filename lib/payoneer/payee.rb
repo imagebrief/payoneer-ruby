@@ -11,11 +11,11 @@ module Payoneer
         p8: redirect_time,
         p9: Payoneer.configuration.auto_approve_sandbox_accounts?,
         p10: true, # returns an xml response
-        p10: payout_method,
+        p11: payout_method,
       }
 
       payoneer_params.merge({p12: "AlreadyHaveAnAccount"}) if existing_account 
-      
+
       response = Payoneer.make_api_request(SIGNUP_URL_API_METHOD_NAME, payoneer_params)
 
       if success?(response)
