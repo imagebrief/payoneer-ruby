@@ -14,7 +14,7 @@ module Payoneer
         p11: payout_method,
       }
 
-      payoneer_params.merge({p12: "AlreadyHaveAnAccount"}) if existing_account 
+      payoneer_params = payoneer_params.merge({p12: "AlreadyHaveAnAccount"}) if existing_account 
 
       response = Payoneer.make_api_request(SIGNUP_URL_API_METHOD_NAME, payoneer_params)
 
